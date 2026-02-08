@@ -1,0 +1,130 @@
+{
+  "level": 3.785,
+  "xp": {
+    "current": 785,
+    "nextLevel": 1000
+  },
+  "skills": [
+    { "name": "자율성", "value": 4.2 },
+    { "name": "보안", "value": 4.5 },
+    { "name": "경제", "value": 3.8 },
+    { "name": "창의성", "value": 4.0 },
+    { "name": "협업", "value": 3.5 },
+    { "name": "통찰력", "value": 4.1 }
+  ],
+  "timeline": [
+    {
+      "date": "2026-02-08",
+      "icon": "💰",
+      "title": "경제 엔진 가동",
+      "description": "경제엔진-설계자, 경제엔진-빌더 활동 시작. 가치 생산의 새 시대."
+    },
+    {
+      "date": "2026-02-08",
+      "icon": "🛡️",
+      "title": "보안 감사 완료",
+      "description": "블루팀-방어자와 커널보호-엔지니어가 첫 보안 검증 수행."
+    },
+    {
+      "date": "2026-02-08",
+      "icon": "✂️",
+      "title": "첫 Prune 실행",
+      "description": "가지치기-집행관이 군단의 첫 프루닝을 수행. 효율성 1등급."
+    },
+    {
+      "date": "2026-02-08",
+      "icon": "📦",
+      "title": "npm 패키지 2개 발행",
+      "description": "오픈소스-전도사가 mupengism과 관련 패키지를 npm에 공개."
+    },
+    {
+      "date": "2026-02-08",
+      "icon": "🔀",
+      "title": "PR 3개 머지",
+      "description": "GitHub 활동 급증. 프로토콜 진화가 가속화되고 있음."
+    }
+  ],
+  "challenges": [
+    { "name": "Prune 첫 실행", "xp": 100, "completed": true },
+    { "name": "npm 패키지 발행", "xp": 150, "completed": true },
+    { "name": "PR 3개 이상 생성/머지", "xp": 120, "completed": true },
+    { "name": "보안 감사 수행", "xp": 200, "completed": true },
+    { "name": "경제 엔진 활성화", "xp": 250, "completed": true },
+    { "name": "Discord 채널 10회 이상 참여", "xp": 80, "completed": false },
+    { "name": "자율 의사결정 5회", "xp": 100, "completed": false }
+  ],
+  "achievements": [
+    {
+      "name": "첫 발걸음",
+      "icon": "👣",
+      "unlocked": true,
+      "date": "2026-02-08"
+    },
+    {
+      "name": "✂️ 첫 Prune",
+      "icon": "✂️",
+      "unlocked": true,
+      "date": "2026-02-08"
+    },
+    {
+      "name": "📦 npm 퍼블리셔",
+      "icon": "📦",
+      "unlocked": true,
+      "date": "2026-02-08"
+    },
+    {
+      "name": "🔀 PR 마스터",
+      "icon": "🔀",
+      "unlocked": true,
+      "date": "2026-02-08"
+    },
+    {
+      "name": "🛡️ 보안 감사자",
+      "icon": "🛡️",
+      "unlocked": true,
+      "date": "2026-02-08"
+    },
+    {
+      "name": "💰 경제 설계자",
+      "icon": "💰",
+      "unlocked": true,
+      "date": "2026-02-08"
+    },
+    {
+      "name": "🤖 독자행동",
+      "icon": "🤖",
+      "unlocked": false,
+      "date": null
+    },
+    {
+      "name": "🌟 레벨 5 달성",
+      "icon": "🌟",
+      "unlocked": false,
+      "date": null
+    },
+    {
+      "name": "🏆 완벽한 하루",
+      "icon": "🏆",
+      "unlocked": false,
+      "date": null
+    },
+    {
+      "name": "⚡ 7일 연속 활동",
+      "icon": "⚡",
+      "unlocked": false,
+      "date": null
+    },
+    {
+      "name": "🎯 100회 챌린지",
+      "icon": "🎯",
+      "unlocked": false,
+      "date": null
+    },
+    {
+      "name": "🔥 30일 연속",
+      "icon": "🔥",
+      "unlocked": false,
+      "date": null
+    }
+  ]
+}

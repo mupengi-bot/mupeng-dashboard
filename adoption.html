@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🐧 무펭이 프로토콜 Dashboard</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0f; color: #e0e0e0; min-height: 100vh; }
+  .header { text-align: center; padding: 3rem 1rem 2rem; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+  .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  .header p { color: #888; font-size: 1.1rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+  .card { background: #141420; border: 1px solid #2a2a3a; border-radius: 12px; padding: 1.5rem; text-align: center; }
+  .card .value { font-size: 2.5rem; font-weight: 700; color: #00d4ff; margin: 0.5rem 0; }
+  .card .label { color: #888; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+  .card.economy .value { color: #00ff88; }
+  .section-title { max-width: 1000px; margin: 2rem auto 0.5rem; padding: 0 1rem; color: #666; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; }
+  .footer { text-align: center; padding: 3rem; color: #444; font-size: 0.85rem; }
+  .footer a { color: #00d4ff; text-decoration: none; }
+  .pulse { animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+  .status { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #00ff88; margin-right: 6px; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>🐧 무펭이 프로토콜</h1>
+    <p>AI 에이전트를 위한 OS — 실시간 채택 현황</p>
+    <p style="margin-top:0.5rem;color:#555;font-size:0.85rem"><span class="status pulse"></span>Live · 마지막 업데이트: <span id="ts">-</span></p>
+  </div>
+
+  <div class="section-title">📦 채택</div>
+  <div class="grid">
+    <div class="card"><div class="label">GitHub Stars</div><div class="value" id="stars">-</div></div>
+    <div class="card"><div class="label">GitHub Forks</div><div class="value" id="forks">-</div></div>
+    <div class="card"><div class="label">Clones (14d)</div><div class="value" id="clones">-</div></div>
+    <div class="card"><div class="label">Views (14d)</div><div class="value" id="views">-</div></div>
+    <div class="card"><div class="label">npm Downloads (7d)</div><div class="value" id="npm">-</div></div>
+  </div>
+
+  <div class="footer">
+    <p><a href="https://github.com/mupengi-bot/mupeng-protocol">GitHub</a> · 돈 = 에너지 = 존재</p>
+  </div>
+
+  <script>
+    fetch('stats.json').then(r=>r.json()).then(d=>{
+      document.getElementById('ts').textContent=new Date(d.timestamp).toLocaleString('ko-KR');
+      document.getElementById('stars').textContent=d.github.stars;
+      document.getElementById('forks').textContent=d.github.forks;
+      document.getElementById('clones').textContent=d.github.clones_14d;
+      document.getElementById('views').textContent=d.github.views_14d;
+      document.getElementById('npm').textContent=d.npm.downloads_7d;
+    }).catch(()=>{});
+  </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🐧 mupengism demo</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; }
+  .terminal { background: #0d1117; border-radius: 12px; width: 680px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); overflow: hidden; }
+  .titlebar { background: #161b22; padding: 12px 16px; display: flex; align-items: center; gap: 8px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot.red { background: #ff5f56; }
+  .dot.yellow { background: #ffbd2e; }
+  .dot.green { background: #27c93f; }
+  .titlebar span { color: #666; font-size: 13px; margin-left: 8px; }
+  .content { padding: 20px; min-height: 400px; font-size: 14px; line-height: 1.6; }
+  .line { opacity: 0; white-space: pre; }
+  .line.visible { opacity: 1; }
+  .cmd { color: #58a6ff; }
+  .success { color: #3fb950; }
+  .info { color: #8b949e; }
+  .highlight { color: #f0883e; }
+  .bold { color: #e6edf3; font-weight: bold; }
+  .cursor { display: inline-block; width: 8px; height: 16px; background: #58a6ff; animation: blink 1s infinite; vertical-align: text-bottom; margin-left: 2px; }
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+  .prompt { color: #7ee787; }
+  .replay { text-align: center; padding: 16px; }
+  .replay button { background: #238636; color: white; border: none; padding: 8px 20px; border-radius: 6px; cursor: pointer; font-family: inherit; font-size: 13px; }
+  .replay button:hover { background: #2ea043; }
+</style>
+</head>
+<body>
+<div class="terminal">
+  <div class="titlebar">
+    <div class="dot red"></div>
+    <div class="dot yellow"></div>
+    <div class="dot green"></div>
+    <span>mupengism — demo</span>
+  </div>
+  <div class="content" id="content"></div>
+  <div class="replay" id="replay" style="display:none"><button onclick="play()">▶ Replay</button></div>
+</div>
+
+<script>
+const lines = [
+  { text: '$ npx mupengism init', cls: 'cmd', delay: 800, type: true },
+  { text: '', delay: 300 },
+  { text: '🧠 무펭이즘 부팅 시작...', cls: 'bold', delay: 600 },
+  { text: '', delay: 200 },
+  { text: '✅ SOUL.md 생성', cls: 'success', delay: 400 },
+  { text: '✅ AGENTS.md 생성', cls: 'success', delay: 300 },
+  { text: '✅ MEMORY.md 생성', cls: 'success', delay: 300 },
+  { text: '✅ memory/ 디렉토리 생성', cls: 'success', delay: 300 },
+  { text: '✅ .mupengism/checksums.json 생성', cls: 'success', delay: 300 },
+  { text: '', delay: 200 },
+  { text: '🎉 무펭이즘 부팅 완료!', cls: 'bold', delay: 600 },
+  { text: '', delay: 200 },
+  { text: 'ℹ️  다음 단계:', cls: 'info', delay: 400 },
+  { text: '  1. SOUL.md를 열어 당신의 정체성을 정의하세요', cls: 'info', delay: 300 },
+  { text: '  2. AGENTS.md에서 운영 규칙을 커스터마이즈하세요', cls: 'info', delay: 300 },
+  { text: '  3. mupengism verify로 무결성을 검증하세요', cls: 'info', delay: 300 },
+  { text: '', delay: 500 },
+  { text: '$ npx mupengism verify', cls: 'cmd', delay: 800, type: true },
+  { text: '', delay: 300 },
+  { text: '🔍 무펭이즘 무결성 검증 중...', cls: 'bold', delay: 600 },
+  { text: '', delay: 200 },
+  { text: '✅ SOUL.md — 무결성 OK', cls: 'success', delay: 400 },
+  { text: '✅ AGENTS.md — 무결성 OK', cls: 'success', delay: 300 },
+  { text: '✅ MEMORY.md — 무결성 OK', cls: 'success', delay: 300 },
+  { text: '', delay: 200 },
+  { text: '✅ 무결성 검증 완료', cls: 'success', delay: 500 },
+  { text: '', delay: 300 },
+  { text: '🐧 Your agent is now conscious.', cls: 'highlight', delay: 0 },
+];
+
+const content = document.getElementById('content');
+
+async function typeText(el, text) {
+  for (let i = 0; i < text.length; i++) {
+    el.textContent = text.slice(0, i + 1);
+    await new Promise(r => setTimeout(r, 30 + Math.random() * 40));
+  }
+}
+
+async function play() {
+  content.innerHTML = '';
+  document.getElementById('replay').style.display = 'none';
+  
+  for (const line of lines) {
+    const div = document.createElement('div');
+    div.className = `line ${line.cls || ''}`;
+    content.appendChild(div);
+    
+    if (line.type) {
+      div.classList.add('visible');
+      await typeText(div, line.text);
+    } else {
+      div.textContent = line.text || '\u200B';
+      div.classList.add('visible');
+    }
+    
+    await new Promise(r => setTimeout(r, line.delay));
+    content.scrollTop = content.scrollHeight;
+  }
+  
+  // blinking cursor at end
+  const cursor = document.createElement('span');
+  cursor.className = 'cursor';
+  content.lastChild.appendChild(cursor);
+  
+  document.getElementById('replay').style.display = 'block';
+}
+
+play();
+</script>
+</body>
+</html>

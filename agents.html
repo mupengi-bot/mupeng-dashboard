@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🐧 무펭이 군단 — Live Agent Board</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'SF Mono', 'Fira Code', monospace; background: #0a0a0f; color: #e0e0e0; min-height: 100vh; }
+
+  .header { text-align: center; padding: 1.5rem 1rem 1rem; border-bottom: 1px solid #1a1a2a; }
+  .header h1 { font-size: 1.6rem; letter-spacing: 2px; }
+  .header .live { color: #00ff88; font-size: 0.7rem; margin-top: 4px; }
+  .header .live::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #00ff88; margin-right: 6px; animation: blink 1.5s infinite; }
+
+  .stats-bar { display: flex; justify-content: center; gap: 2.5rem; padding: 1rem; background: #0d0d14; }
+  .stat { text-align: center; }
+  .stat .num { font-size: 2rem; font-weight: 700; }
+  .stat .lbl { font-size: 0.6rem; color: #555; text-transform: uppercase; letter-spacing: 1px; }
+
+  .board { max-width: 1200px; margin: 1rem auto; padding: 0 0.8rem 2rem; }
+
+  .category { margin-bottom: 1.2rem; }
+  .cat-header { display: flex; align-items: center; gap: 8px; padding: 6px 0; margin-bottom: 6px; border-bottom: 1px solid #1a1a2a; }
+  .cat-icon { font-size: 1.1rem; }
+  .cat-name { font-size: 0.8rem; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+  .cat-count { font-size: 0.65rem; color: #444; margin-left: auto; }
+
+  .agents-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
+
+  .card {
+    padding: 10px 12px; border-radius: 8px; position: relative;
+    transition: all 0.3s ease; cursor: default; min-height: 72px;
+  }
+  .card.active {
+    background: rgba(0, 255, 136, 0.06); border: 1px solid rgba(0, 255, 136, 0.25);
+    animation: glow 2.5s ease-in-out infinite alternate;
+  }
+  .card.idle {
+    background: rgba(255, 255, 255, 0.015); border: 1px solid #1a1a2a; opacity: 0.6;
+  }
+  .card.main {
+    background: rgba(0, 212, 255, 0.06); border: 1px solid rgba(0, 212, 255, 0.25);
+    animation: glow-blue 2s ease-in-out infinite alternate;
+  }
+  .card.failed {
+    background: rgba(255, 68, 68, 0.06); border: 1px solid rgba(255, 68, 68, 0.25);
+  }
+
+  .card .top { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .card.active .dot { background: #00ff88; animation: blink 1.5s infinite; }
+  .card.idle .dot { background: #333; }
+  .card.main .dot { background: #00d4ff; animation: blink 1s infinite; }
+  .card.failed .dot { background: #ff4444; }
+
+  .card .name { font-size: 0.75rem; font-weight: 600; color: #ccc; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card .task { color: #666; font-size: 0.65rem; margin-top: 4px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .card .meta { display: flex; justify-content: space-between; margin-top: 4px; }
+  .card .tokens { color: #333; font-size: 0.6rem; }
+  .card .model { color: #2a2a3a; font-size: 0.55rem; }
+
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+  @keyframes glow { from { box-shadow: 0 0 4px rgba(0,255,136,0.05); } to { box-shadow: 0 0 12px rgba(0,255,136,0.1); } }
+  @keyframes glow-blue { from { box-shadow: 0 0 4px rgba(0,212,255,0.05); } to { box-shadow: 0 0 12px rgba(0,212,255,0.1); } }
+
+  .footer { text-align: center; padding: 1.5rem; color: #222; font-size: 0.7rem; border-top: 1px solid #111; }
+  .footer a { color: #00d4ff; text-decoration: none; }
+
+  .links { display: flex; justify-content: center; gap: 1rem; padding: 0.5rem; }
+  .links a { color: #444; font-size: 0.7rem; text-decoration: none; padding: 4px 10px; border: 1px solid #1a1a2a; border-radius: 4px; }
+  .links a:hover { color: #00d4ff; border-color: #00d4ff; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>🐧 무펭이 군단</h1>
+    <div class="live">LIVE — <span id="ts"></span> · 3초 자동 갱신</div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat"><div class="num" id="total" style="color:#00d4ff">0</div><div class="lbl">Total</div></div>
+    <div class="stat"><div class="num" id="active" style="color:#00ff88">0</div><div class="lbl">Active</div></div>
+    <div class="stat"><div class="num" id="done" style="color:#666">0</div><div class="lbl">Done</div></div>
+    <div class="stat"><div class="num" id="tokens" style="color:#ff9500">0</div><div class="lbl">Tokens (k)</div></div>
+  </div>
+
+  <div class="links">
+    <a href="/growth.html">⚡ 성장</a>
+    <a href="/index.html">📊 채택 현황</a>
+    <a href="/demo.html">🎬 데모</a>
+    <a href="https://github.com/mupengi-bot/mupengism" target="_blank">GitHub</a>
+    <a href="https://www.npmjs.com/package/mupengism" target="_blank">npm</a>
+  </div>
+
+  <div class="board" id="board"></div>
+
+  <div class="footer">
+    무펭이즘 v2 · <a href="https://github.com/mupengi-bot/mupengism">mupengi-bot/mupengism</a> · 돈 = 에너지 = 존재
+  </div>
+
+<script>
+const CATEGORIES = [
+  { name: '코어', icon: '🧠', agents: ['main'] },
+  { name: '무펭이즘', icon: '🐧', agents: ['Layer0-설계자', '프로토콜-진화자', '인스톨러-엔지니어', '독자행동-실험자', '오픈소스-전도사'] },
+  { name: '경제', icon: '💰', agents: ['경제엔진-설계자', '경제엔진-빌더'] },
+  { name: '보안', icon: '🛡️', agents: ['레드팀-공격자', '블루팀-방어자', '카오스-엔지니어', '커널보호-엔지니어'] },
+  { name: 'AssoAI', icon: '🏢', agents: ['AssoAI-UI마무리', 'AssoAI-UI점검', 'MCP-GitHub설정', 'Boot-Sequence고도화', '채팅메인-UX', '파일자동분류-API', '온보딩-재설계'] },
+  { name: '운영', icon: '🔧', agents: ['가지치기-집행관', 'think-tank'] },
+];
+
+function render(data) {
+  const board = document.getElementById('board');
+  board.innerHTML = '';
+  const map = {};
+  (data.agents || []).forEach(a => { map[a.label] = a; });
+
+  let total = 0, active = 0, done = 0, tkTotal = 0;
+  const assigned = new Set();
+
+  for (const cat of CATEGORIES) {
+    const catAgents = cat.agents.map(name => {
+      assigned.add(name);
+      return map[name] || { label: name, active: false, tokens: 0, lastTask: '대기 중' };
+    });
+
+    const div = document.createElement('div');
+    div.className = 'category';
+
+    const activeCount = catAgents.filter(a => a.active).length;
+    const doneCount = catAgents.filter(a => !a.active && a.tokens > 0).length;
+
+    div.innerHTML = `<div class="cat-header">
+      <span class="cat-icon">${cat.icon}</span>
+      <span class="cat-name">${cat.name}</span>
+      <span class="cat-count">${activeCount > 0 ? `🟢 ${activeCount} active` : ''} ${doneCount > 0 ? `✅ ${doneCount} done` : ''} · ${catAgents.length}명</span>
+    </div><div class="agents-grid"></div>`;
+
+    const grid = div.querySelector('.agents-grid');
+
+    for (const a of catAgents) {
+      const isMain = a.label === 'main';
+      const isFailed = (a.lastTask || '').startsWith('❌');
+      const isActive = a.active;
+      const isDone = !isActive && a.tokens > 0;
+      const cls = isMain ? 'main' : isFailed ? 'failed' : isActive ? 'active' : 'idle';
+      const tk = ((a.tokens || 0) / 1000).toFixed(1);
+
+      total++;
+      if (isActive) active++;
+      if (isDone) done++;
+      tkTotal += a.tokens || 0;
+
+      grid.innerHTML += `<div class="card ${cls}">
+        <div class="top"><div class="dot"></div><div class="name">${a.label}</div></div>
+        <div class="task">${a.lastTask || '-'}</div>
+        <div class="meta"><span class="tokens">${tk}k tok</span></div>
+      </div>`;
+    }
+
+    board.appendChild(div);
+  }
+
+  // unassigned
+  const extra = (data.agents || []).filter(a => !assigned.has(a.label));
+  if (extra.length) {
+    const div = document.createElement('div');
+    div.className = 'category';
+    div.innerHTML = `<div class="cat-header"><span class="cat-icon">📦</span><span class="cat-name">기타</span><span class="cat-count">${extra.length}명</span></div><div class="agents-grid"></div>`;
+    const grid = div.querySelector('.agents-grid');
+    for (const a of extra) {
+      total++; if (a.active) active++; if (!a.active && a.tokens > 0) done++; tkTotal += a.tokens || 0;
+      const cls = a.active ? 'active' : 'idle';
+      grid.innerHTML += `<div class="card ${cls}"><div class="top"><div class="dot"></div><div class="name">${a.label}</div></div><div class="task">${a.lastTask || '-'}</div><div class="meta"><span class="tokens">${((a.tokens||0)/1000).toFixed(1)}k</span></div></div>`;
+    }
+    board.appendChild(div);
+  }
+
+  document.getElementById('total').textContent = total;
+  document.getElementById('active').textContent = active;
+  document.getElementById('done').textContent = done;
+  document.getElementById('tokens').textContent = (tkTotal / 1000).toFixed(0);
+  document.getElementById('ts').textContent = data.timestamp ? new Date(data.timestamp).toLocaleString('ko-KR') : '-';
+}
+
+function load() {
+  fetch('agent-state.json?t=' + Date.now()).then(r => r.json()).then(render).catch(() => {});
+}
+load();
+setInterval(load, 3000);
+</script>
+</body>
+</html>
