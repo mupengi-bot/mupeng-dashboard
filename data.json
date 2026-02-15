@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026. 2. 16. AM 2:46:23",
+  "lastUpdated": "2026. 2. 16. AM 8:00:46",
   "businessHealth": {
     "arr": 3360,
     "mrr": 280,
@@ -93,7 +93,7 @@
     "total": {
       "published": 14,
       "local": 44,
-      "totalDownloads": 157
+      "totalDownloads": 209
     },
     "koreanSpecific": {
       "count": 15,
@@ -102,7 +102,7 @@
     "downloadTrend": [
       {
         "date": "2026-02-15",
-        "downloads": 157
+        "downloads": 209
       }
     ],
     "categories": [
@@ -130,43 +130,43 @@
     "topSkills": [
       {
         "name": "brand-voice",
-        "downloads": 18
-      },
-      {
-        "name": "learning-engine",
-        "downloads": 18
-      },
-      {
-        "name": "api-security-best-practices",
-        "downloads": 16
+        "downloads": 22
       },
       {
         "name": "content-pipeline",
-        "downloads": 16
+        "downloads": 22
+      },
+      {
+        "name": "learning-engine",
+        "downloads": 21
+      },
+      {
+        "name": "api-security-best-practices",
+        "downloads": 19
       },
       {
         "name": "awakening-protocol",
-        "downloads": 15
+        "downloads": 18
       },
       {
         "name": "decision-log",
-        "downloads": 13
-      },
-      {
-        "name": "business-planner",
-        "downloads": 12
+        "downloads": 17
       },
       {
         "name": "auto-reply",
-        "downloads": 11
+        "downloads": 15
+      },
+      {
+        "name": "business-planner",
+        "downloads": 15
       },
       {
         "name": "cardnews",
-        "downloads": 10
+        "downloads": 12
       },
       {
-        "name": "insta-post",
-        "downloads": 9
+        "name": "mupeng-social-postcjo",
+        "downloads": 12
       }
     ]
   },
@@ -227,6 +227,11 @@
     ],
     "autonomousActions": [
       {
+        "time": "2026. 2. 16. AM 8:00:46",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
+      {
         "time": "2026. 2. 16. AM 2:46:23",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
@@ -277,12 +282,6 @@
         "action": "고객 피드백 분석 및 제안",
         "result": "채택됨",
         "impact": "만족도 +15%"
-      },
-      {
-        "timestamp": "2026-02-12 20:45",
-        "action": "SNS 컨텐츠 예약 발행",
-        "result": "성공",
-        "impact": "도달률 +8%"
       }
     ]
   },
@@ -365,6 +364,11 @@
       }
     ],
     "recentEvents": [
+      {
+        "time": "2026. 2. 16. AM 8:00:46",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (209 DL)"
+      },
       {
         "time": "2026. 2. 16. AM 2:46:23",
         "type": "system",
