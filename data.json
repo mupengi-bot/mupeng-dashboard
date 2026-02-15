@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026. 2. 16. AM 2:43:14",
+  "lastUpdated": "2026. 2. 16. AM 2:46:23",
   "businessHealth": {
     "arr": 3360,
     "mrr": 280,
@@ -93,7 +93,7 @@
     "total": {
       "published": 14,
       "local": 44,
-      "totalDownloads": 154
+      "totalDownloads": 157
     },
     "koreanSpecific": {
       "count": 15,
@@ -102,7 +102,7 @@
     "downloadTrend": [
       {
         "date": "2026-02-15",
-        "downloads": 154
+        "downloads": 157
       }
     ],
     "categories": [
@@ -227,6 +227,11 @@
     ],
     "autonomousActions": [
       {
+        "time": "2026. 2. 16. AM 2:46:23",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
+      {
         "time": "2026. 2. 16. AM 2:43:14",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
@@ -278,12 +283,6 @@
         "action": "SNS 컨텐츠 예약 발행",
         "result": "성공",
         "impact": "도달률 +8%"
-      },
-      {
-        "timestamp": "2026-02-12 15:20",
-        "action": "이미지 생성 및 최적화",
-        "result": "재작업",
-        "impact": "품질 개선"
       }
     ]
   },
@@ -291,27 +290,31 @@
     "customerStatus": [
       {
         "name": "포네이처스",
+        "industry": "요식업",
         "status": "active",
-        "lastActive": "오늘",
-        "skillCount": 3
+        "agentUptime": 98,
+        "lastActivity": "오늘"
       },
       {
         "name": "STACK컨테이너",
+        "industry": "제조",
         "status": "active",
-        "lastActive": "오늘",
-        "skillCount": 3
+        "agentUptime": 95,
+        "lastActivity": "오늘"
       },
       {
         "name": "육거리소문난만두",
+        "industry": "요식업",
         "status": "active",
-        "lastActive": "오늘",
-        "skillCount": 3
+        "agentUptime": 97,
+        "lastActivity": "오늘"
       },
       {
         "name": "디플랫",
+        "industry": "서비스",
         "status": "active",
-        "lastActive": "오늘",
-        "skillCount": 3
+        "agentUptime": 99,
+        "lastActivity": "오늘"
       }
     ],
     "skillUsageHeatmap": [
@@ -362,6 +365,11 @@
       }
     ],
     "recentEvents": [
+      {
+        "time": "2026. 2. 16. AM 2:46:23",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (157 DL)"
+      },
       {
         "time": "2026. 2. 16. AM 2:43:14",
         "type": "system",

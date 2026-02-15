@@ -155,7 +155,7 @@ function renderPipeline(pipeline) {
         <span class="pipeline-item-stage">${item.stage}</span>
       </div>
       <div class="pipeline-item-info">
-        ${item.industry} · 잠재가치 ${formatCurrency(item.potential)}
+        ${item.industry} · 잠재가치 ${formatCurrency(item.potential || item.value)}
       </div>
     `;
     container.appendChild(div);
@@ -576,6 +576,7 @@ function renderProposalQueue(proposals) {
 // ============================================
 
 function formatCurrency(amount) {
+  if (amount == null || isNaN(amount)) return '-';
   if (amount >= 100000000) {
     return (amount / 100000000).toFixed(1) + '억';
   } else if (amount >= 10000) {
