@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐧 무펭이 대시보드</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">🐧</span>
+        <h1>무펭이 대시보드</h1>
+      </div>
+      <div class="header-info">
+        <span class="last-updated">마지막 업데이트: <span id="lastUpdate">-</span></span>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="tabs">
+      <button class="tab active" data-section="business">사업 건강 지표</button>
+      <button class="tab" data-section="skills">스킬 생태계</button>
+      <button class="tab" data-section="growth">에이전트 성장</button>
+      <button class="tab" data-section="operations">운영 현황</button>
+    </nav>
+
+    <!-- Section 1: Business Health -->
+    <section id="business" class="section active">
+      <div class="section-header">
+        <h2>💰 사업 건강 지표</h2>
+      </div>
+      
+      <div class="grid">
+        <!-- KPI Cards -->
+        <div class="card">
+          <div class="card-header">
+            <h3>ARR (연간 반복 매출)</h3>
+          </div>
+          <div class="metric">
+            <span class="value" id="arr">-</span>
+            <span class="unit">원</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>MRR (월간 반복 매출)</h3>
+          </div>
+          <div class="metric">
+            <span class="value" id="mrr">-</span>
+            <span class="unit">원</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>고객 수</h3>
+          </div>
+          <div class="metric">
+            <span class="value" id="customers">-</span>
+            <span class="unit">곳</span>
+          </div>
+          <div class="sub-metric">
+            이탈률: <span id="churnRate">-</span>%
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>런웨이 (현금 소진까지)</h3>
+          </div>
+          <div class="metric">
+            <span class="value" id="runway">-</span>
+            <span class="unit">개월</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="runwayBar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <!-- Revenue Trend Chart -->
+        <div class="card chart-card">
+          <div class="card-header">
+            <h3>ARR/MRR 추이 (6개월)</h3>
+          </div>
+          <canvas id="revenueChart"></canvas>
+        </div>
+
+        <!-- Pipeline -->
+        <div class="card">
+          <div class="card-header">
+            <h3>파이프라인 (잠재 고객)</h3>
+          </div>
+          <div class="pipeline-list" id="pipelineList"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Skill Ecosystem -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <h2>🛠️ 스킬 생태계</h2>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>ClawHub 총 스킬 수</h3>
+          </div>
+          <div class="metric">
+            <span class="value" id="publishedSkills">-</span>
+            <span class="unit">개 배포</span>
+          </div>
+          <div class="sub-metric">
+            로컬: <span id="localSkills">-</span>개 | 총 다운로드: <span id="totalDownloads">-</span>건
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>한국 특화 스킬</h3>
+          </div>
+          <div class="metric">
+            <span class="value" id="koreanSkillsPercent">-</span>
+            <span class="unit">%</span>
+          </div>
+          <div class="sub-metric">
+            <span id="koreanSkillsCount">-</span>개 / 전체 <span id="totalSkillsCount">-</span>개
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <!-- Download Trend -->
+        <div class="card chart-card">
+          <div class="card-header">
+            <h3>다운로드 추이 (7일)</h3>
+          </div>
+          <canvas id="downloadChart"></canvas>
+        </div>
+
+        <!-- Category Distribution -->
+        <div class="card chart-card">
+          <div class="card-header">
+            <h3>카테고리별 분포</h3>
+          </div>
+          <canvas id="categoryChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Top Skills -->
+      <div class="card chart-card">
+        <div class="card-header">
+          <h3>Top 10 인기 스킬</h3>
+        </div>
+        <canvas id="topSkillsChart"></canvas>
+      </div>
+    </section>
+
+    <!-- Section 3: Agent Growth -->
+    <section id="growth" class="section">
+      <div class="section-header">
+        <h2>📈 에이전트 성장</h2>
+      </div>
+
+      <div class="grid">
+        <!-- Proposal Acceptance Rate -->
+        <div class="card chart-card">
+          <div class="card-header">
+            <h3>제안 채택률 (주별)</h3>
+          </div>
+          <canvas id="proposalChart"></canvas>
+        </div>
+
+        <!-- Error Frequency -->
+        <div class="card chart-card">
+          <div class="card-header">
+            <h3>실수 빈도 (주별)</h3>
+          </div>
+          <canvas id="errorChart"></canvas>
+        </div>
+
+        <!-- Skill Development Speed -->
+        <div class="card chart-card">
+          <div class="card-header">
+            <h3>스킬 개발 속도 (주당 신규)</h3>
+          </div>
+          <canvas id="skillDevChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Autonomous Actions Log -->
+      <div class="card">
+        <div class="card-header">
+          <h3>자율 행동 로그 (최근 10개)</h3>
+        </div>
+        <div class="action-log" id="actionLog"></div>
+      </div>
+    </section>
+
+    <!-- Section 4: Operations -->
+    <section id="operations" class="section">
+      <div class="section-header">
+        <h2>⚙️ 운영 현황</h2>
+      </div>
+
+      <!-- Customer Status Cards -->
+      <div class="card">
+        <div class="card-header">
+          <h3>고객별 에이전트 가동 상태</h3>
+        </div>
+        <div class="customer-grid" id="customerStatus"></div>
+      </div>
+
+      <!-- Skill Usage Heatmap -->
+      <div class="card">
+        <div class="card-header">
+          <h3>스킬 사용률 히트맵 (고객 × 스킬)</h3>
+        </div>
+        <div class="heatmap" id="skillHeatmap"></div>
+      </div>
+
+      <div class="grid">
+        <!-- Recent Events Feed -->
+        <div class="card">
+          <div class="card-header">
+            <h3>알림/이벤트 피드 (최근 20개)</h3>
+          </div>
+          <div class="event-feed" id="eventFeed"></div>
+        </div>
+
+        <!-- Proactive Queue -->
+        <div class="card">
+          <div class="card-header">
+            <h3>선제적 제안 큐 (미처리)</h3>
+          </div>
+          <div class="proposal-queue" id="proposalQueue"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
