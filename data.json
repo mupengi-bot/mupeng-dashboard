@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026. 2. 16. PM 2:00:30",
+  "lastUpdated": "2026. 2. 16. PM 10:00:06",
   "businessHealth": {
     "arr": 3360,
     "mrr": 280,
@@ -93,7 +93,7 @@
     "total": {
       "published": 14,
       "local": 44,
-      "totalDownloads": 278
+      "totalDownloads": 341
     },
     "koreanSpecific": {
       "count": 15,
@@ -106,7 +106,7 @@
       },
       {
         "date": "2026-02-16",
-        "downloads": 278
+        "downloads": 341
       }
     ],
     "categories": [
@@ -133,44 +133,44 @@
     ],
     "topSkills": [
       {
-        "name": "content-pipeline",
-        "downloads": 30
-      },
-      {
         "name": "learning-engine",
-        "downloads": 30
+        "downloads": 34
       },
       {
-        "name": "brand-voice",
-        "downloads": 27
+        "name": "content-pipeline",
+        "downloads": 33
       },
       {
         "name": "decision-log",
-        "downloads": 26
+        "downloads": 33
+      },
+      {
+        "name": "brand-voice",
+        "downloads": 31
       },
       {
         "name": "api-security-best-practices",
-        "downloads": 23
-      },
-      {
-        "name": "awakening-protocol",
-        "downloads": 21
-      },
-      {
-        "name": "insta-post",
-        "downloads": 21
+        "downloads": 27
       },
       {
         "name": "auto-reply",
-        "downloads": 18
+        "downloads": 27
       },
       {
-        "name": "business-planner",
-        "downloads": 16
+        "name": "insta-post",
+        "downloads": 27
+      },
+      {
+        "name": "awakening-protocol",
+        "downloads": 25
       },
       {
         "name": "cardnews",
-        "downloads": 15
+        "downloads": 20
+      },
+      {
+        "name": "business-planner",
+        "downloads": 19
       }
     ]
   },
@@ -231,6 +231,11 @@
     ],
     "autonomousActions": [
       {
+        "time": "2026. 2. 16. PM 10:00:06",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
+      {
         "time": "2026. 2. 16. PM 2:00:30",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
@@ -279,12 +284,6 @@
         "action": "Discord DM 자동 응대",
         "result": "성공",
         "impact": "응답시간 -85%"
-      },
-      {
-        "timestamp": "2026-02-13 11:30",
-        "action": "ClawHub 스킬 배포",
-        "result": "성공",
-        "impact": "다운로드 3건"
       }
     ]
   },
@@ -367,6 +366,11 @@
       }
     ],
     "recentEvents": [
+      {
+        "time": "2026. 2. 16. PM 10:00:06",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (341 DL)"
+      },
       {
         "time": "2026. 2. 16. PM 2:00:30",
         "type": "system",
