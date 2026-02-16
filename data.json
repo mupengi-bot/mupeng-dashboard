@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026. 2. 16. AM 8:00:46",
+  "lastUpdated": "2026. 2. 16. PM 2:00:30",
   "businessHealth": {
     "arr": 3360,
     "mrr": 280,
@@ -93,7 +93,7 @@
     "total": {
       "published": 14,
       "local": 44,
-      "totalDownloads": 209
+      "totalDownloads": 278
     },
     "koreanSpecific": {
       "count": 15,
@@ -103,6 +103,10 @@
       {
         "date": "2026-02-15",
         "downloads": 209
+      },
+      {
+        "date": "2026-02-16",
+        "downloads": 278
       }
     ],
     "categories": [
@@ -129,44 +133,44 @@
     ],
     "topSkills": [
       {
-        "name": "brand-voice",
-        "downloads": 22
-      },
-      {
         "name": "content-pipeline",
-        "downloads": 22
+        "downloads": 30
       },
       {
         "name": "learning-engine",
-        "downloads": 21
+        "downloads": 30
       },
       {
-        "name": "api-security-best-practices",
-        "downloads": 19
-      },
-      {
-        "name": "awakening-protocol",
-        "downloads": 18
+        "name": "brand-voice",
+        "downloads": 27
       },
       {
         "name": "decision-log",
-        "downloads": 17
+        "downloads": 26
+      },
+      {
+        "name": "api-security-best-practices",
+        "downloads": 23
+      },
+      {
+        "name": "awakening-protocol",
+        "downloads": 21
+      },
+      {
+        "name": "insta-post",
+        "downloads": 21
       },
       {
         "name": "auto-reply",
-        "downloads": 15
+        "downloads": 18
       },
       {
         "name": "business-planner",
-        "downloads": 15
+        "downloads": 16
       },
       {
         "name": "cardnews",
-        "downloads": 12
-      },
-      {
-        "name": "mupeng-social-postcjo",
-        "downloads": 12
+        "downloads": 15
       }
     ]
   },
@@ -227,6 +231,11 @@
     ],
     "autonomousActions": [
       {
+        "time": "2026. 2. 16. PM 2:00:30",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
+      {
         "time": "2026. 2. 16. AM 8:00:46",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
@@ -276,12 +285,6 @@
         "action": "ClawHub 스킬 배포",
         "result": "성공",
         "impact": "다운로드 3건"
-      },
-      {
-        "timestamp": "2026-02-13 09:15",
-        "action": "고객 피드백 분석 및 제안",
-        "result": "채택됨",
-        "impact": "만족도 +15%"
       }
     ]
   },
@@ -364,6 +367,11 @@
       }
     ],
     "recentEvents": [
+      {
+        "time": "2026. 2. 16. PM 2:00:30",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (278 DL)"
+      },
       {
         "time": "2026. 2. 16. AM 8:00:46",
         "type": "system",
