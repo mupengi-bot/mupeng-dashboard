@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026. 2. 17. PM 2:00:28",
+  "lastUpdated": "2026. 2. 17. PM 10:00:09",
   "businessHealth": {
     "arr": 3360,
     "mrr": 280,
@@ -93,7 +93,7 @@
     "total": {
       "published": 14,
       "local": 44,
-      "totalDownloads": 428
+      "totalDownloads": 490
     },
     "koreanSpecific": {
       "count": 15,
@@ -110,7 +110,7 @@
       },
       {
         "date": "2026-02-17",
-        "downloads": 428
+        "downloads": 490
       }
     ],
     "categories": [
@@ -138,43 +138,43 @@
     "topSkills": [
       {
         "name": "learning-engine",
-        "downloads": 46
+        "downloads": 56
       },
       {
         "name": "content-pipeline",
-        "downloads": 43
+        "downloads": 48
       },
       {
         "name": "brand-voice",
-        "downloads": 42
+        "downloads": 46
       },
       {
         "name": "decision-log",
-        "downloads": 40
+        "downloads": 44
       },
       {
         "name": "api-security-best-practices",
-        "downloads": 36
+        "downloads": 42
       },
       {
         "name": "insta-post",
+        "downloads": 36
+      },
+      {
+        "name": "awakening-protocol",
         "downloads": 33
       },
       {
         "name": "auto-reply",
-        "downloads": 31
-      },
-      {
-        "name": "awakening-protocol",
-        "downloads": 29
+        "downloads": 33
       },
       {
         "name": "business-planner",
-        "downloads": 28
+        "downloads": 32
       },
       {
         "name": "cardnews",
-        "downloads": 22
+        "downloads": 27
       }
     ]
   },
@@ -235,6 +235,11 @@
     ],
     "autonomousActions": [
       {
+        "time": "2026. 2. 17. PM 10:00:09",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
+      {
         "time": "2026. 2. 17. PM 2:00:28",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
@@ -280,12 +285,6 @@
         "action": "네이버 블로그 포스팅 자동화",
         "result": "성공",
         "impact": "조회수 450+"
-      },
-      {
-        "timestamp": "2026-02-15 14:20",
-        "action": "고객사 재고 이상 감지 알림",
-        "result": "성공",
-        "impact": "재고 손실 방지"
       }
     ]
   },
@@ -368,6 +367,11 @@
       }
     ],
     "recentEvents": [
+      {
+        "time": "2026. 2. 17. PM 10:00:09",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (490 DL)"
+      },
       {
         "time": "2026. 2. 17. PM 2:00:28",
         "type": "system",
