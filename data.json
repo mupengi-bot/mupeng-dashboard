@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026. 2. 17. PM 10:00:09",
+  "lastUpdated": "2026. 2. 18. AM 8:00:25",
   "businessHealth": {
     "arr": 3360,
     "mrr": 280,
@@ -93,7 +93,7 @@
     "total": {
       "published": 14,
       "local": 44,
-      "totalDownloads": 490
+      "totalDownloads": 568
     },
     "koreanSpecific": {
       "count": 15,
@@ -110,7 +110,7 @@
       },
       {
         "date": "2026-02-17",
-        "downloads": 490
+        "downloads": 568
       }
     ],
     "categories": [
@@ -138,43 +138,43 @@
     "topSkills": [
       {
         "name": "learning-engine",
-        "downloads": 56
-      },
-      {
-        "name": "content-pipeline",
-        "downloads": 48
+        "downloads": 69
       },
       {
         "name": "brand-voice",
-        "downloads": 46
+        "downloads": 55
+      },
+      {
+        "name": "content-pipeline",
+        "downloads": 53
       },
       {
         "name": "decision-log",
-        "downloads": 44
+        "downloads": 50
       },
       {
         "name": "api-security-best-practices",
-        "downloads": 42
+        "downloads": 47
       },
       {
         "name": "insta-post",
-        "downloads": 36
-      },
-      {
-        "name": "awakening-protocol",
-        "downloads": 33
-      },
-      {
-        "name": "auto-reply",
-        "downloads": 33
+        "downloads": 41
       },
       {
         "name": "business-planner",
-        "downloads": 32
+        "downloads": 40
       },
       {
-        "name": "cardnews",
-        "downloads": 27
+        "name": "auto-reply",
+        "downloads": 39
+      },
+      {
+        "name": "awakening-protocol",
+        "downloads": 36
+      },
+      {
+        "name": "mupeng-skill-router",
+        "downloads": 31
       }
     ]
   },
@@ -235,6 +235,11 @@
     ],
     "autonomousActions": [
       {
+        "time": "2026. 2. 18. AM 8:00:25",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
+      {
         "time": "2026. 2. 17. PM 10:00:09",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
@@ -279,12 +284,6 @@
         "action": "Instagram 카드뉴스 자동 게시",
         "result": "성공",
         "impact": "참여율 +12%"
-      },
-      {
-        "timestamp": "2026-02-15 18:30",
-        "action": "네이버 블로그 포스팅 자동화",
-        "result": "성공",
-        "impact": "조회수 450+"
       }
     ]
   },
@@ -367,6 +366,11 @@
       }
     ],
     "recentEvents": [
+      {
+        "time": "2026. 2. 18. AM 8:00:25",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (568 DL)"
+      },
       {
         "time": "2026. 2. 17. PM 10:00:09",
         "type": "system",
