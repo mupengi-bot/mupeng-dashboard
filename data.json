@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026. 2. 27. AM 8:00:06",
+  "lastUpdated": "2026. 2. 27. AM 8:00:21",
   "businessHealth": {
     "arr": 3360,
     "mrr": 280,
@@ -271,7 +271,7 @@
     ],
     "autonomousActions": [
       {
-        "time": "2026. 2. 27. AM 8:00:06",
+        "time": "2026. 2. 27. AM 8:00:21",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
       },
@@ -402,7 +402,7 @@
     ],
     "recentEvents": [
       {
-        "time": "2026. 2. 27. AM 8:00:06",
+        "time": "2026. 2. 27. AM 8:00:21",
         "type": "system",
         "message": "📊 데이터 자동 수집 (1993 DL)"
       },
