@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026. 2. 27. AM 8:00:21",
+  "lastUpdated": "2026. 2. 27. PM 2:00:19",
   "businessHealth": {
     "arr": 3360,
     "mrr": 280,
@@ -147,6 +147,10 @@
       {
         "date": "2026-02-26",
         "downloads": 1993
+      },
+      {
+        "date": "2026-02-27",
+        "downloads": 1993
       }
     ],
     "categories": [
@@ -271,6 +275,11 @@
     ],
     "autonomousActions": [
       {
+        "time": "2026. 2. 27. PM 2:00:19",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
+      {
         "time": "2026. 2. 27. AM 8:00:21",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
@@ -312,11 +321,6 @@
       },
       {
         "time": "2026. 2. 23. PM 10:00:02",
-        "action": "대시보드 데이터 자동 수집",
-        "result": "success"
-      },
-      {
-        "time": "2026. 2. 23. PM 2:00:02",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
       }
@@ -401,6 +405,11 @@
       }
     ],
     "recentEvents": [
+      {
+        "time": "2026. 2. 27. PM 2:00:19",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (1993 DL)"
+      },
       {
         "time": "2026. 2. 27. AM 8:00:21",
         "type": "system",
@@ -545,11 +554,6 @@
         "time": "2026. 2. 17. AM 8:00:47",
         "type": "system",
         "message": "📊 데이터 자동 수집 (396 DL)"
-      },
-      {
-        "time": "2026. 2. 16. PM 10:00:06",
-        "type": "system",
-        "message": "📊 데이터 자동 수집 (341 DL)"
       }
     ],
     "proactiveQueue": [
