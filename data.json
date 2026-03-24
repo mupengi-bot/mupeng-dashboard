@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026. 3. 24. PM 10:00:05",
+  "lastUpdated": "2026. 3. 25. AM 8:00:04",
   "businessHealth": {
     "arr": 3360,
     "mrr": 280,
@@ -98,7 +98,7 @@
     "total": {
       "published": 14,
       "local": 44,
-      "totalDownloads": 9117
+      "totalDownloads": 9178
     },
     "koreanSpecific": {
       "count": 15,
@@ -223,7 +223,7 @@
       },
       {
         "date": "2026-03-24",
-        "downloads": 9117
+        "downloads": 9178
       }
     ],
     "categories": [
@@ -251,43 +251,43 @@
     "topSkills": [
       {
         "name": "learning-engine",
-        "downloads": 1570
+        "downloads": 1583
       },
       {
         "name": "mupeng-prompt-engineer",
-        "downloads": 733
+        "downloads": 745
       },
       {
         "name": "brand-voice",
-        "downloads": 725
+        "downloads": 731
       },
       {
         "name": "content-pipeline",
-        "downloads": 685
+        "downloads": 688
       },
       {
         "name": "mupeng-skill-router",
-        "downloads": 645
+        "downloads": 649
       },
       {
         "name": "auto-reply",
-        "downloads": 623
+        "downloads": 626
       },
       {
         "name": "api-security-best-practices",
-        "downloads": 611
+        "downloads": 613
       },
       {
         "name": "decision-log",
-        "downloads": 591
+        "downloads": 600
       },
       {
         "name": "insta-post",
-        "downloads": 548
+        "downloads": 550
       },
       {
         "name": "cardnews",
-        "downloads": 503
+        "downloads": 504
       }
     ]
   },
@@ -348,6 +348,11 @@
     ],
     "autonomousActions": [
       {
+        "time": "2026. 3. 25. AM 8:00:04",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
+      {
         "time": "2026. 3. 24. PM 10:00:05",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
@@ -389,11 +394,6 @@
       },
       {
         "time": "2026. 3. 22. AM 8:00:03",
-        "action": "대시보드 데이터 자동 수집",
-        "result": "success"
-      },
-      {
-        "time": "2026. 3. 21. PM 10:00:04",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
       }
@@ -478,6 +478,11 @@
       }
     ],
     "recentEvents": [
+      {
+        "time": "2026. 3. 25. AM 8:00:04",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (9178 DL)"
+      },
       {
         "time": "2026. 3. 24. PM 10:00:05",
         "type": "system",
@@ -622,11 +627,6 @@
         "time": "2026. 3. 15. AM 8:00:13",
         "type": "system",
         "message": "📊 데이터 자동 수집 (7279 DL)"
-      },
-      {
-        "time": "2026. 3. 14. PM 10:00:05",
-        "type": "system",
-        "message": "📊 데이터 자동 수집 (7210 DL)"
       }
     ],
     "proactiveQueue": [
