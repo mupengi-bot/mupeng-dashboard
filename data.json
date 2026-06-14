@@ -1,65 +1,42 @@
 {
-  "lastUpdated": "2026. 6. 15. 오전 8:00:05",
+  "lastUpdated": "2026. 6. 15. 오전 8:21:24",
+  "_note": "실측·사실 기반 값만 수집. 매출/MRR/runway/파이프라인/성장지표는 ERP 연결 전까지 비움(가짜값 금지).",
   "businessHealth": {
-    "arr": 3360,
-    "mrr": 280,
+    "arr": null,
+    "mrr": null,
     "customers": {
       "total": 4,
-      "churnRate": 0,
+      "churnRate": null,
       "list": [
         {
           "name": "포네이처스",
           "industry": "요식업",
-          "mrr": 70,
           "status": "active",
-          "skills": [
-            "auto-reply",
-            "content-pipeline",
-            "cardnews"
-          ],
           "since": "2025-11"
         },
         {
           "name": "STACK컨테이너",
           "industry": "제조",
-          "mrr": 70,
           "status": "active",
-          "skills": [
-            "daily-report",
-            "data-scraper",
-            "notification-hub"
-          ],
           "since": "2025-12"
         },
         {
           "name": "육거리소문난만두",
           "industry": "요식업",
-          "mrr": 70,
           "status": "active",
-          "skills": [
-            "auto-reply",
-            "cardnews",
-            "performance-tracker"
-          ],
           "since": "2026-01"
         },
         {
           "name": "디플랫",
           "industry": "서비스",
-          "mrr": 70,
           "status": "active",
-          "skills": [
-            "content-pipeline",
-            "seo-audit",
-            "web-claude"
-          ],
           "since": "2026-02"
         }
       ]
     },
     "runway": {
-      "months": 5.7,
-      "cash": 1600
+      "months": null,
+      "cash": null
     },
     "revenue": [
       {
@@ -88,36 +65,13 @@
         "mrr": 280
       }
     ],
-    "pipeline": [
-      {
-        "name": "예비고객A",
-        "industry": "요식업",
-        "value": 1200,
-        "stage": "협상중"
-      },
-      {
-        "name": "예비고객B",
-        "industry": "제조",
-        "value": 1800,
-        "stage": "제안"
-      },
-      {
-        "name": "예비고객C",
-        "industry": "서비스",
-        "value": 800,
-        "stage": "초기접촉"
-      }
-    ]
+    "pipeline": []
   },
   "skillEcosystem": {
     "total": {
       "published": 15,
-      "local": 44,
+      "local": 140,
       "totalDownloads": 20839
-    },
-    "koreanSpecific": {
-      "count": 15,
-      "percentage": 34
     },
     "downloadTrend": [
       {
@@ -241,28 +195,6 @@
         "downloads": 20839
       }
     ],
-    "categories": [
-      {
-        "name": "마케팅",
-        "count": 8
-      },
-      {
-        "name": "운영",
-        "count": 12
-      },
-      {
-        "name": "개발",
-        "count": 10
-      },
-      {
-        "name": "분석",
-        "count": 6
-      },
-      {
-        "name": "기타",
-        "count": 8
-      }
-    ],
     "topSkills": [
       {
         "name": "learning-engine",
@@ -307,61 +239,12 @@
     ]
   },
   "agentGrowth": {
-    "proposalAcceptance": [
-      {
-        "week": "W1",
-        "rate": 60
-      },
-      {
-        "week": "W2",
-        "rate": 65
-      },
-      {
-        "week": "W3",
-        "rate": 72
-      },
-      {
-        "week": "W4",
-        "rate": 75
-      }
-    ],
-    "errorFrequency": [
-      {
-        "week": "W1",
-        "errors": 5
-      },
-      {
-        "week": "W2",
-        "errors": 4
-      },
-      {
-        "week": "W3",
-        "errors": 3
-      },
-      {
-        "week": "W4",
-        "errors": 2
-      }
-    ],
-    "skillDevelopment": [
-      {
-        "week": "W1",
-        "newSkills": 3
-      },
-      {
-        "week": "W2",
-        "newSkills": 5
-      },
-      {
-        "week": "W3",
-        "newSkills": 8
-      },
-      {
-        "week": "W4",
-        "newSkills": 6
-      }
-    ],
     "autonomousActions": [
+      {
+        "time": "2026. 6. 15. 오전 8:21:24",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
       {
         "time": "2026. 6. 15. 오전 8:00:05",
         "action": "대시보드 데이터 자동 수집",
@@ -406,11 +289,6 @@
         "time": "2026. 6. 12. 오후 2:00:04",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
-      },
-      {
-        "time": "2026. 6. 12. 오전 8:00:06",
-        "action": "대시보드 데이터 자동 수집",
-        "result": "success"
       }
     ]
   },
@@ -419,80 +297,30 @@
       {
         "name": "포네이처스",
         "industry": "요식업",
-        "status": "active",
-        "agentUptime": 98,
-        "lastActivity": "오늘"
+        "status": "active"
       },
       {
         "name": "STACK컨테이너",
         "industry": "제조",
-        "status": "active",
-        "agentUptime": 95,
-        "lastActivity": "오늘"
+        "status": "active"
       },
       {
         "name": "육거리소문난만두",
         "industry": "요식업",
-        "status": "active",
-        "agentUptime": 97,
-        "lastActivity": "오늘"
+        "status": "active"
       },
       {
         "name": "디플랫",
         "industry": "서비스",
-        "status": "active",
-        "agentUptime": 99,
-        "lastActivity": "오늘"
-      }
-    ],
-    "skillUsageHeatmap": [
-      {
-        "customer": "포네이처스",
-        "skill": "auto-reply",
-        "usage": 85
-      },
-      {
-        "customer": "포네이처스",
-        "skill": "content-pipeline",
-        "usage": 60
-      },
-      {
-        "customer": "포네이처스",
-        "skill": "cardnews",
-        "usage": 40
-      },
-      {
-        "customer": "STACK컨테이너",
-        "skill": "daily-report",
-        "usage": 90
-      },
-      {
-        "customer": "STACK컨테이너",
-        "skill": "data-scraper",
-        "usage": 70
-      },
-      {
-        "customer": "육거리소문난만두",
-        "skill": "auto-reply",
-        "usage": 80
-      },
-      {
-        "customer": "육거리소문난만두",
-        "skill": "cardnews",
-        "usage": 55
-      },
-      {
-        "customer": "디플랫",
-        "skill": "content-pipeline",
-        "usage": 75
-      },
-      {
-        "customer": "디플랫",
-        "skill": "seo-audit",
-        "usage": 45
+        "status": "active"
       }
     ],
     "recentEvents": [
+      {
+        "time": "2026. 6. 15. 오전 8:21:24",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (20839 DL)"
+      },
       {
         "time": "2026. 6. 15. 오전 8:00:05",
         "type": "system",
@@ -637,31 +465,6 @@
         "time": "2026. 6. 4. 오후 10:00:04",
         "type": "system",
         "message": "📊 데이터 자동 수집 (19804 DL)"
-      },
-      {
-        "time": "2026. 6. 4. 오후 2:00:05",
-        "type": "system",
-        "message": "📊 데이터 자동 수집 (19757 DL)"
-      }
-    ],
-    "proactiveQueue": [
-      {
-        "id": 1,
-        "suggestion": "ClawHub 한국특화 스킬 10개 추가 개발",
-        "priority": "high",
-        "status": "pending"
-      },
-      {
-        "id": 2,
-        "suggestion": "고객 케이스 스터디 콘텐츠 제작",
-        "priority": "medium",
-        "status": "pending"
-      },
-      {
-        "id": 3,
-        "suggestion": "텔레메트리 수집 훅 MVP 개발",
-        "priority": "medium",
-        "status": "pending"
       }
     ]
   }
