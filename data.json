@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026. 7. 1. 오후 10:00:06",
+  "lastUpdated": "2026. 7. 2. 오전 8:00:07",
   "_note": "실측·사실 기반 값만 수집. 매출/MRR/runway/파이프라인/성장지표는 ERP 연결 전까지 비움(가짜값 금지).",
   "businessHealth": {
     "arr": null,
@@ -71,7 +71,7 @@
     "total": {
       "published": 15,
       "local": 141,
-      "totalDownloads": 21670
+      "totalDownloads": 21681
     },
     "downloadTrend": [
       {
@@ -192,25 +192,25 @@
       },
       {
         "date": "2026-07-01",
-        "downloads": 21670
+        "downloads": 21681
       }
     ],
     "topSkills": [
       {
         "name": "learning-engine",
-        "downloads": 3525
+        "downloads": 3527
       },
       {
         "name": "content-pipeline",
-        "downloads": 2336
+        "downloads": 2338
       },
       {
         "name": "mupeng-prompt-engineer",
-        "downloads": 2290
+        "downloads": 2291
       },
       {
         "name": "mupeng-skill-router",
-        "downloads": 1477
+        "downloads": 1478
       },
       {
         "name": "brand-voice",
@@ -218,7 +218,7 @@
       },
       {
         "name": "auto-reply",
-        "downloads": 1424
+        "downloads": 1425
       },
       {
         "name": "decision-log",
@@ -230,16 +230,21 @@
       },
       {
         "name": "insta-post",
-        "downloads": 1168
+        "downloads": 1169
       },
       {
         "name": "mupeng-social-postcjo",
-        "downloads": 1164
+        "downloads": 1165
       }
     ]
   },
   "agentGrowth": {
     "autonomousActions": [
+      {
+        "time": "2026. 7. 2. 오전 8:00:07",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
       {
         "time": "2026. 7. 1. 오후 10:00:06",
         "action": "대시보드 데이터 자동 수집",
@@ -284,11 +289,6 @@
         "time": "2026. 6. 29. 오전 8:00:05",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
-      },
-      {
-        "time": "2026. 6. 28. 오후 10:00:05",
-        "action": "대시보드 데이터 자동 수집",
-        "result": "success"
       }
     ]
   },
@@ -316,6 +316,11 @@
       }
     ],
     "recentEvents": [
+      {
+        "time": "2026. 7. 2. 오전 8:00:07",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (21681 DL)"
+      },
       {
         "time": "2026. 7. 1. 오후 10:00:06",
         "type": "system",
@@ -458,11 +463,6 @@
       },
       {
         "time": "2026. 6. 22. 오후 2:00:04",
-        "type": "system",
-        "message": "📊 데이터 자동 수집 (21444 DL)"
-      },
-      {
-        "time": "2026. 6. 22. 오전 8:00:05",
         "type": "system",
         "message": "📊 데이터 자동 수집 (21444 DL)"
       }
