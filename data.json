@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026. 8. 6. 오후 2:00:00",
+  "lastUpdated": "2026. 8. 6. 오후 10:00:00",
   "_note": "실측·사실 기반 값만 수집. ERP 값은 daily-snapshot(36h 이내)에서만. stale이면 null(가짜값 금지).",
   "businessHealth": {
     "arr": null,
@@ -74,7 +74,7 @@
   "erp": {
     "source": "memory/erp-sync/daily-snapshot.json",
     "snapshotAt": "2026-08-05T23:12:32.929Z",
-    "ageHours": 5.8,
+    "ageHours": 13.8,
     "stale": false,
     "revenue": null,
     "costs": null,
@@ -88,7 +88,7 @@
     "total": {
       "published": 15,
       "local": 145,
-      "totalDownloads": 25253
+      "totalDownloads": 25259
     },
     "downloadTrend": [
       {
@@ -209,17 +209,17 @@
       },
       {
         "date": "2026-08-06",
-        "downloads": 25253
+        "downloads": 25259
       }
     ],
     "topSkills": [
       {
         "name": "learning-engine",
-        "downloads": 3846
+        "downloads": 3847
       },
       {
         "name": "content-pipeline",
-        "downloads": 3326
+        "downloads": 3327
       },
       {
         "name": "mupeng-prompt-engineer",
@@ -235,7 +235,7 @@
       },
       {
         "name": "auto-reply",
-        "downloads": 1624
+        "downloads": 1628
       },
       {
         "name": "decision-log",
@@ -257,6 +257,11 @@
   },
   "agentGrowth": {
     "autonomousActions": [
+      {
+        "time": "2026. 8. 6. 오후 10:00:00",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
       {
         "time": "2026. 8. 6. 오후 2:00:00",
         "action": "대시보드 데이터 자동 수집",
@@ -301,11 +306,6 @@
         "time": "2026. 8. 3. 오후 10:00:00",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
-      },
-      {
-        "time": "2026. 8. 3. 오후 2:00:00",
-        "action": "대시보드 데이터 자동 수집",
-        "result": "success"
       }
     ]
   },
@@ -334,6 +334,11 @@
     ],
     "erpAlerts": [],
     "recentEvents": [
+      {
+        "time": "2026. 8. 6. 오후 10:00:00",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (25259 DL)"
+      },
       {
         "time": "2026. 8. 6. 오후 2:00:00",
         "type": "system",
@@ -478,11 +483,6 @@
         "time": "2026. 7. 28. 오전 8:00:00",
         "type": "system",
         "message": "📊 데이터 자동 수집 (24673 DL)"
-      },
-      {
-        "time": "2026. 7. 27. 오후 10:00:00",
-        "type": "system",
-        "message": "📊 데이터 자동 수집 (24626 DL)"
       }
     ]
   }
