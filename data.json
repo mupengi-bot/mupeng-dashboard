@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026. 9. 25. 오후 2:00:00",
+  "lastUpdated": "2026. 9. 25. 오후 10:00:00",
   "_note": "실측·사실 기반 값만 수집. ERP 값은 daily-snapshot(36h 이내)에서만. stale이면 null(가짜값 금지).",
   "businessHealth": {
     "arr": null,
@@ -74,7 +74,7 @@
   "erp": {
     "source": "memory/erp-sync/daily-snapshot.json",
     "snapshotAt": "2026-09-24T01:03:51.057Z",
-    "ageHours": 28,
+    "ageHours": 36,
     "stale": false,
     "revenue": null,
     "costs": null,
@@ -86,9 +86,9 @@
   },
   "skillEcosystem": {
     "total": {
-      "published": 14,
+      "published": 1,
       "local": 144,
-      "totalDownloads": 26978
+      "totalDownloads": 1387
     },
     "downloadTrend": [
       {
@@ -209,54 +209,23 @@
       },
       {
         "date": "2026-09-25",
-        "downloads": 26978
+        "downloads": 1387
       }
     ],
     "topSkills": [
       {
-        "name": "content-pipeline",
-        "downloads": 4299
-      },
-      {
-        "name": "learning-engine",
-        "downloads": 4016
-      },
-      {
-        "name": "mupeng-prompt-engineer",
-        "downloads": 2689
-      },
-      {
-        "name": "auto-reply",
-        "downloads": 1809
-      },
-      {
-        "name": "brand-voice",
-        "downloads": 1791
-      },
-      {
-        "name": "mupeng-skill-router",
-        "downloads": 1764
-      },
-      {
-        "name": "api-security-best-practices",
-        "downloads": 1645
-      },
-      {
-        "name": "decision-log",
-        "downloads": 1632
-      },
-      {
-        "name": "mupeng-social-postcjo",
-        "downloads": 1494
-      },
-      {
-        "name": "insta-post",
-        "downloads": 1471
+        "name": "awakening-protocol",
+        "downloads": 1387
       }
     ]
   },
   "agentGrowth": {
     "autonomousActions": [
+      {
+        "time": "2026. 9. 25. 오후 10:00:00",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
       {
         "time": "2026. 9. 25. 오후 2:00:00",
         "action": "대시보드 데이터 자동 수집",
@@ -301,11 +270,6 @@
         "time": "2026. 9. 22. 오후 10:00:00",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
-      },
-      {
-        "time": "2026. 9. 22. 오후 2:00:00",
-        "action": "대시보드 데이터 자동 수집",
-        "result": "success"
       }
     ]
   },
@@ -334,6 +298,11 @@
     ],
     "erpAlerts": [],
     "recentEvents": [
+      {
+        "time": "2026. 9. 25. 오후 10:00:00",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (1387 DL)"
+      },
       {
         "time": "2026. 9. 25. 오후 2:00:00",
         "type": "system",
@@ -478,11 +447,6 @@
         "time": "2026. 9. 16. 오전 8:00:00",
         "type": "system",
         "message": "📊 데이터 자동 수집 (27633 DL)"
-      },
-      {
-        "time": "2026. 9. 15. 오후 10:00:00",
-        "type": "system",
-        "message": "📊 데이터 자동 수집 (27620 DL)"
       }
     ]
   }
