@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026. 10. 24. 오후 10:00:00",
+  "lastUpdated": "2026. 10. 25. 오전 8:00:00",
   "_note": "실측·사실 기반 값만 수집. ERP 값은 ERP API 직접 조회(2026-10-07~). 조회 실패 항목은 null(가짜값 금지).",
   "businessHealth": {
     "arr": null,
@@ -73,7 +73,7 @@
   },
   "erp": {
     "source": "ERP API (live)",
-    "snapshotAt": "2026-10-24T13:01:28.464Z",
+    "snapshotAt": "2026-10-24T23:01:18.628Z",
     "ageHours": 0,
     "stale": false,
     "month": "2026-10",
@@ -117,7 +117,7 @@
     "total": {
       "published": 15,
       "local": 153,
-      "totalDownloads": 29425
+      "totalDownloads": 29427
     },
     "downloadTrend": [
       {
@@ -238,7 +238,7 @@
       },
       {
         "date": "2026-10-24",
-        "downloads": 29425
+        "downloads": 29427
       }
     ],
     "topSkills": [
@@ -276,7 +276,7 @@
       },
       {
         "name": "mupeng-social-postcjo",
-        "downloads": 1638
+        "downloads": 1639
       },
       {
         "name": "insta-post",
@@ -286,6 +286,11 @@
   },
   "agentGrowth": {
     "autonomousActions": [
+      {
+        "time": "2026. 10. 25. 오전 8:00:00",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
       {
         "time": "2026. 10. 24. 오후 10:00:00",
         "action": "대시보드 데이터 자동 수집",
@@ -330,11 +335,6 @@
         "time": "2026. 10. 22. 오전 8:00:00",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
-      },
-      {
-        "time": "2026. 10. 21. 오후 10:00:00",
-        "action": "대시보드 데이터 자동 수집",
-        "result": "success"
       }
     ]
   },
@@ -376,6 +376,11 @@
       }
     ],
     "recentEvents": [
+      {
+        "time": "2026. 10. 25. 오전 8:00:00",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (29427 DL)"
+      },
       {
         "time": "2026. 10. 24. 오후 10:00:00",
         "type": "system",
@@ -520,11 +525,6 @@
         "time": "2026. 10. 15. 오후 2:00:00",
         "type": "system",
         "message": "📊 데이터 자동 수집 (29007 DL)"
-      },
-      {
-        "time": "2026. 10. 15. 오전 8:00:02",
-        "type": "system",
-        "message": "📊 데이터 자동 수집 (29003 DL)"
       }
     ]
   }
