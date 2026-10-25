@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026. 10. 25. 오전 8:00:00",
+  "lastUpdated": "2026. 10. 25. 오후 2:00:00",
   "_note": "실측·사실 기반 값만 수집. ERP 값은 ERP API 직접 조회(2026-10-07~). 조회 실패 항목은 null(가짜값 금지).",
   "businessHealth": {
     "arr": null,
@@ -73,7 +73,7 @@
   },
   "erp": {
     "source": "ERP API (live)",
-    "snapshotAt": "2026-10-24T23:01:18.628Z",
+    "snapshotAt": "2026-10-25T05:01:37.583Z",
     "ageHours": 0,
     "stale": false,
     "month": "2026-10",
@@ -101,10 +101,6 @@
       {
         "type": "invoice_due",
         "count": 6
-      },
-      {
-        "type": "event_d1",
-        "count": 1
       }
     ],
     "dataEntryGap": {
@@ -117,13 +113,9 @@
     "total": {
       "published": 15,
       "local": 153,
-      "totalDownloads": 29427
+      "totalDownloads": 29469
     },
     "downloadTrend": [
-      {
-        "date": "2026-09-25",
-        "downloads": 28141
-      },
       {
         "date": "2026-09-26",
         "downloads": 28164
@@ -239,53 +231,62 @@
       {
         "date": "2026-10-24",
         "downloads": 29427
+      },
+      {
+        "date": "2026-10-25",
+        "downloads": 29469
       }
     ],
     "topSkills": [
       {
         "name": "content-pipeline",
-        "downloads": 4396
+        "downloads": 4398
       },
       {
         "name": "learning-engine",
-        "downloads": 4108
+        "downloads": 4110
       },
       {
         "name": "mupeng-prompt-engineer",
-        "downloads": 2770
+        "downloads": 2773
       },
       {
         "name": "auto-reply",
-        "downloads": 1908
+        "downloads": 1911
       },
       {
         "name": "brand-voice",
-        "downloads": 1873
+        "downloads": 1876
       },
       {
         "name": "mupeng-skill-router",
-        "downloads": 1842
+        "downloads": 1844
       },
       {
         "name": "api-security-best-practices",
-        "downloads": 1727
+        "downloads": 1730
       },
       {
         "name": "decision-log",
-        "downloads": 1716
+        "downloads": 1719
       },
       {
         "name": "mupeng-social-postcjo",
-        "downloads": 1639
+        "downloads": 1644
       },
       {
         "name": "insta-post",
-        "downloads": 1549
+        "downloads": 1551
       }
     ]
   },
   "agentGrowth": {
     "autonomousActions": [
+      {
+        "time": "2026. 10. 25. 오후 2:00:00",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
       {
         "time": "2026. 10. 25. 오전 8:00:00",
         "action": "대시보드 데이터 자동 수집",
@@ -330,11 +331,6 @@
         "time": "2026. 10. 22. 오후 2:00:00",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
-      },
-      {
-        "time": "2026. 10. 22. 오전 8:00:00",
-        "action": "대시보드 데이터 자동 수집",
-        "result": "success"
       }
     ]
   },
@@ -369,13 +365,14 @@
       {
         "type": "invoice_due",
         "count": 6
-      },
-      {
-        "type": "event_d1",
-        "count": 1
       }
     ],
     "recentEvents": [
+      {
+        "time": "2026. 10. 25. 오후 2:00:00",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (29469 DL)"
+      },
       {
         "time": "2026. 10. 25. 오전 8:00:00",
         "type": "system",
@@ -520,11 +517,6 @@
         "time": "2026. 10. 15. 오후 10:00:00",
         "type": "system",
         "message": "📊 데이터 자동 수집 (29039 DL)"
-      },
-      {
-        "time": "2026. 10. 15. 오후 2:00:00",
-        "type": "system",
-        "message": "📊 데이터 자동 수집 (29007 DL)"
       }
     ]
   }
