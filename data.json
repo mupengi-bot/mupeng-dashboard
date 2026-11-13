@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026. 11. 13. 오전 8:00:00",
+  "lastUpdated": "2026. 11. 13. 오후 2:00:00",
   "_note": "실측·사실 기반 값만 수집. ERP 값은 ERP API 직접 조회(2026-10-07~). 조회 실패 항목은 null(가짜값 금지).",
   "businessHealth": {
     "arr": null,
@@ -73,7 +73,7 @@
   },
   "erp": {
     "source": "ERP API (live)",
-    "snapshotAt": "2026-11-12T23:01:04.121Z",
+    "snapshotAt": "2026-11-13T05:01:00.965Z",
     "ageHours": 0,
     "stale": false,
     "month": "2026-11",
@@ -100,11 +100,7 @@
       },
       {
         "type": "event_d7",
-        "count": 1
-      },
-      {
-        "type": "event_d1",
-        "count": 1
+        "count": 2
       }
     ],
     "dataEntryGap": {
@@ -117,13 +113,9 @@
     "total": {
       "published": 15,
       "local": 153,
-      "totalDownloads": 30300
+      "totalDownloads": 30318
     },
     "downloadTrend": [
-      {
-        "date": "2026-10-14",
-        "downloads": 29003
-      },
       {
         "date": "2026-10-15",
         "downloads": 29057
@@ -239,6 +231,10 @@
       {
         "date": "2026-11-12",
         "downloads": 30300
+      },
+      {
+        "date": "2026-11-13",
+        "downloads": 30318
       }
     ],
     "topSkills": [
@@ -248,44 +244,49 @@
       },
       {
         "name": "learning-engine",
-        "downloads": 4163
+        "downloads": 4164
       },
       {
         "name": "mupeng-prompt-engineer",
-        "downloads": 2846
+        "downloads": 2848
       },
       {
         "name": "auto-reply",
-        "downloads": 1976
+        "downloads": 1977
       },
       {
         "name": "brand-voice",
-        "downloads": 1942
+        "downloads": 1943
       },
       {
         "name": "mupeng-skill-router",
-        "downloads": 1891
+        "downloads": 1892
       },
       {
         "name": "decision-log",
-        "downloads": 1786
+        "downloads": 1788
       },
       {
         "name": "api-security-best-practices",
-        "downloads": 1778
+        "downloads": 1779
       },
       {
         "name": "mupeng-social-postcjo",
-        "downloads": 1727
+        "downloads": 1729
       },
       {
         "name": "insta-post",
-        "downloads": 1594
+        "downloads": 1596
       }
     ]
   },
   "agentGrowth": {
     "autonomousActions": [
+      {
+        "time": "2026. 11. 13. 오후 2:00:00",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
       {
         "time": "2026. 11. 13. 오전 8:00:00",
         "action": "대시보드 데이터 자동 수집",
@@ -330,11 +331,6 @@
         "time": "2026. 11. 10. 오후 2:00:00",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
-      },
-      {
-        "time": "2026. 11. 10. 오전 8:00:00",
-        "action": "대시보드 데이터 자동 수집",
-        "result": "success"
       }
     ]
   },
@@ -368,14 +364,15 @@
       },
       {
         "type": "event_d7",
-        "count": 1
-      },
-      {
-        "type": "event_d1",
-        "count": 1
+        "count": 2
       }
     ],
     "recentEvents": [
+      {
+        "time": "2026. 11. 13. 오후 2:00:00",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (30318 DL)"
+      },
       {
         "time": "2026. 11. 13. 오전 8:00:00",
         "type": "system",
@@ -520,11 +517,6 @@
         "time": "2026. 11. 3. 오후 10:00:00",
         "type": "system",
         "message": "📊 데이터 자동 수집 (29947 DL)"
-      },
-      {
-        "time": "2026. 11. 3. 오후 2:00:00",
-        "type": "system",
-        "message": "📊 데이터 자동 수집 (29917 DL)"
       }
     ]
   }
