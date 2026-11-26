@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026/11/26 오후 2:00:00",
+  "lastUpdated": "2026/11/26 오후 10:00:00",
   "_note": "실측·사실 기반 값만 수집. ERP 값은 ERP API 직접 조회(2026-10-07~). 조회 실패 항목은 null(가짜값 금지).",
   "businessHealth": {
     "arr": null,
@@ -73,7 +73,7 @@
   },
   "erp": {
     "source": "ERP API (live)",
-    "snapshotAt": "2026-11-26T05:00:34.421Z",
+    "snapshotAt": "2026-11-26T13:00:38.265Z",
     "ageHours": 0,
     "stale": false,
     "month": "2026-11",
@@ -119,7 +119,7 @@
   },
   "skillEcosystem": {
     "total": {
-      "published": 0,
+      "published": 1,
       "local": 155,
       "totalDownloads": 0
     },
@@ -245,10 +245,20 @@
         "downloads": 0
       }
     ],
-    "topSkills": []
+    "topSkills": [
+      {
+        "name": "brand-voice",
+        "downloads": 0
+      }
+    ]
   },
   "agentGrowth": {
     "autonomousActions": [
+      {
+        "time": "2026/11/26 오후 10:00:00",
+        "action": "대시보드 데이터 자동 수집",
+        "result": "success"
+      },
       {
         "time": "2026/11/26 오후 2:00:00",
         "action": "대시보드 데이터 자동 수집",
@@ -291,11 +301,6 @@
       },
       {
         "time": "2026/11/23 오후 10:00:00",
-        "action": "대시보드 데이터 자동 수집",
-        "result": "success"
-      },
-      {
-        "time": "2026/11/23 오후 2:00:00",
         "action": "대시보드 데이터 자동 수집",
         "result": "success"
       }
@@ -343,6 +348,11 @@
       }
     ],
     "recentEvents": [
+      {
+        "time": "2026/11/26 오후 10:00:00",
+        "type": "system",
+        "message": "📊 데이터 자동 수집 (0 DL)"
+      },
       {
         "time": "2026/11/26 오후 2:00:00",
         "type": "system",
@@ -487,11 +497,6 @@
         "time": "2026/11/17 오전 8:00:00",
         "type": "system",
         "message": "📊 데이터 자동 수집 (30559 DL)"
-      },
-      {
-        "time": "2026/11/16 오후 10:00:00",
-        "type": "system",
-        "message": "📊 데이터 자동 수집 (30523 DL)"
       }
     ]
   }
